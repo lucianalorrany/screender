@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto|Courgette|Pacifico:400,700" rel="stylesheet">
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+  
+<title>Cadastro</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<style type="text/css">
+	body{
+		color: #999;
+		background: #e2e2e2;
+		font-family: 'Roboto', sans-serif;
+	}
+	.form-control{
+		min-height: 41px;
+		box-shadow: none;
+		border-color: #e1e1e1;
+	}
+	.form-control:focus{
+		border-color: #00cb82;
+	}	
+    .form-control, .btn{        
+        border-radius: 3px;
+    }
+	.form-header{
+		margin: -30px -30px 20px;
+		padding: 30px 30px 10px;
+		text-align: center;
+		background: #000000;
+		border-bottom: 1px solid #eee;
+		color: #fff;
+	}
+	.form-header h2{
+		font-size: 34px;
+		font-weight: bold;
+        margin: 0 0 10px;
+		font-family: 'Pacifico', sans-serif;
+    }
+	.form-header p{
+		margin: 20px 0 15px;
+		font-size: 17px;
+		line-height: normal;
+		font-family: 'Courgette', sans-serif;
+	}
+    .signup-form{
+		width: 390px;
+		margin: 0 auto;	
+		padding: 30px 0;	
+	}
+    .signup-form form{
+		color: #999;
+		border-radius: 3px;
+    	margin-bottom: 15px;
+        background: #f0f0f0;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+    }
+	.signup-form .form-group{
+		margin-bottom: 20px;
+		
+	}		
+	.signup-form label{
+		font-weight: normal;
+		font-size: 13px;
+	}
+    .signup-form input[type="checkbox"]{
+		margin-top: 2px;
+	}
+    .signup-form .btn{        
+        font-size: 16px;
+        font-weight: bold;
+		background: #000000;
+		border: none;
+		min-width: 200px;
+    }
+	.signup-form .btn:hover, .signup-form .btn:focus{
+		background: #000000; !important;
+        outline: none;
+	}
+    .signup-form a{
+		color: #000000;		
+	}
+    .signup-form a:hover{
+		text-decoration: underline;
+	}
+	
+</style>
+</head>
+<body>
+</br>
+<center><img src="_imagens/logotipo_novo.png"></center>
+<div class="signup-form">
+    <form action="/examples/actions/confirmation.php" method="post">
+		<div class="form-header">
+			<h2>Crie sua conta</h2>
+			<p>Crie sua conta. É grátis e leva apenas um minuto.</p>
+		</div>
+        <div class="form-group">
+			<label>Nome:</label>
+        	<input type="text" class="form-control" name="username" required="required">
+        </div>
+		
+		<div class="form-group">
+		<label>Sexo:&nbsp;</label>
+			<input type="radio"  name="sexo" value="M"> <label id="labS">Masculino&nbsp;&nbsp;&nbsp;</label>
+			<input type="radio"  name="sexo" value="F"> <label id="labS">Feminino</label> <br />
+			</div>
+			
+			<div class="form-group">
+			<label id="lab">&nbsp;Data de Nascimento:</label></br>
+            <input type="date" class="form-control" id="inputDataNasc" placeholder="Data de Nascimento Completa">
+            </div>
+						
+        <div class="form-group">
+			<label>E-mail:</label>
+        	<input type="email" class="form-control" name="email" required="required">
+        </div>
+		<div class="form-group">
+			<label>Senha:</label>
+            <input type="password" class="form-control" name="password" required="required">
+        </div>
+		<div class="form-group">
+			<label>Confirme a senha:</label>
+            <input type="password" class="form-control" name="confirm_password" required="required">
+        </div>        
+        <div class="form-group">
+			<label class="checkbox-inline"><input type="checkbox" required="required"><a href="#">Aceito os Termos de</a> <a href="#">Uso e Política de Privacidade</a></label>
+		</div>
+<div class="container mt-3">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Enviar</button>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <center><h4 class="modal-title">Cadastrado com Sucesso</h4></center>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Seja bem-vindo ao Screender
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <a href="home_novo.html"><button type="button" class="btn btn-success btn-lg btn-block login-btn" data-dismiss="modal">Sair</button></a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+</body>
+</html>
+
+    </form>
+</div>
+</body>
+</html>                            
